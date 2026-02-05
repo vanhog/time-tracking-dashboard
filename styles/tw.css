@@ -1,4 +1,6 @@
 /*! tailwindcss v4.1.18 | MIT License | https://tailwindcss.com */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+@layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
@@ -6,12 +8,23 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-blue-400: oklch(70.7% 0.165 254.624);
+    --color-white: oklch(100% 0 0);
     --spacing: 0.25rem;
     --text-xs: 0.75rem;
     --text-xs--line-height: calc(1 / 0.75);
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --tracking-normal: 0em;
+    --radius-2xl: 1rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --font-rubik: 'Rubik', sans-serif;
+    --color-navy-950: oklch(21.4% 0.03 257);
+    --color-navy-800: oklch(41.8% 0.1 271);
+    --color-navy-200: oklch(83.7% 0.09 276);
+    --color-orange-300a: oklch(74.5% 0.17 55);
+    --card-height: 10rem;
   }
 }
 @layer base {
@@ -177,17 +190,230 @@
   .static {
     position: static;
   }
+  .container {
+    width: 100%;
+    @media (width >= 40rem) {
+      max-width: 40rem;
+    }
+    @media (width >= 48rem) {
+      max-width: 48rem;
+    }
+    @media (width >= 64rem) {
+      max-width: 64rem;
+    }
+    @media (width >= 80rem) {
+      max-width: 80rem;
+    }
+    @media (width >= 96rem) {
+      max-width: 96rem;
+    }
+  }
   .mt-6 {
     margin-top: calc(var(--spacing) * 6);
   }
+  .flex {
+    display: flex;
+  }
+  .table {
+    display: table;
+  }
+  .h-30 {
+    height: calc(var(--spacing) * 30);
+  }
+  .h-screen {
+    height: 100vh;
+  }
+  .w-50 {
+    width: calc(var(--spacing) * 50);
+  }
+  .w-full {
+    width: 100%;
+  }
+  .border-collapse {
+    border-collapse: collapse;
+  }
+  .resize {
+    resize: both;
+  }
+  .flex-col {
+    flex-direction: column;
+  }
+  .flex-row {
+    flex-direction: row;
+  }
+  .items-center {
+    align-items: center;
+  }
+  .justify-between {
+    justify-content: space-between;
+  }
+  .justify-center {
+    justify-content: center;
+  }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
+  .bg-navy-950 {
+    background-color: var(--color-navy-950);
+  }
+  .bg-orange-300a {
+    background-color: var(--color-orange-300a);
+  }
+  .bg-\[url\(\'\$\{category\.icon\}\'\)\] {
+    background-image: url('${category.icon}');
+  }
+  .bg-\[url\(\'\/images\/icon-work\.svg\'\)\] {
+    background-image: url('/images/icon-work.svg');
+  }
+  .text-navy-200 {
+    color: var(--color-navy-200);
+  }
+  .text-white {
+    color: var(--color-white);
+  }
+  .underline {
+    text-decoration-line: underline;
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
+  }
 }
 @layer components {
+  * {
+    font-family: var(--font-rubik);
+  }
+  .text-preset-1 {
+    font-family: var(--font-rubik);
+    font-size: 56px;
+    --tw-leading: 66px;
+    line-height: 66px;
+    --tw-font-weight: var(--font-weight-light);
+    font-weight: var(--font-weight-light);
+    --tw-tracking: 0px;
+    letter-spacing: 0px;
+  }
+  .text-preset-2 {
+    font-family: var(--font-rubik);
+    font-size: 40px;
+    --tw-leading: 47px;
+    line-height: 47px;
+    --tw-font-weight: var(--font-weight-light);
+    font-weight: var(--font-weight-light);
+    --tw-tracking: 0px;
+    letter-spacing: 0px;
+  }
+  .text-preset-3 {
+    font-family: var(--font-rubik);
+    font-size: 32px;
+    --tw-leading: calc(var(--spacing) * 9);
+    line-height: calc(var(--spacing) * 9);
+    --tw-font-weight: var(--font-weight-light);
+    font-weight: var(--font-weight-light);
+    --tw-tracking: var(--tracking-normal);
+    letter-spacing: var(--tracking-normal);
+  }
+  .text-preset-4 {
+    font-family: var(--font-rubik);
+    font-size: 24px;
+    --tw-leading: 28px;
+    line-height: 28px;
+    --tw-font-weight: var(--font-weight-light);
+    font-weight: var(--font-weight-light);
+    --tw-tracking: 0px;
+    letter-spacing: 0px;
+  }
+  .text-preset-5m {
+    font-family: var(--font-rubik);
+    font-size: 18px;
+    --tw-leading: calc(var(--spacing) * 5.25);
+    line-height: calc(var(--spacing) * 5.25);
+    --tw-font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-medium);
+    --tw-tracking: var(--tracking-normal);
+    letter-spacing: var(--tracking-normal);
+  }
+  .text-preset-5 {
+    font-family: var(--font-rubik);
+    font-size: 18px;
+    --tw-leading: 21px;
+    line-height: 21px;
+    --tw-font-weight: var(--font-weight-normal);
+    font-weight: var(--font-weight-normal);
+    --tw-tracking: 0px;
+    letter-spacing: 0px;
+  }
+  .text-preset-6 {
+    font-family: var(--font-rubik);
+    font-size: 15px;
+    --tw-leading: 18px;
+    line-height: 18px;
+    --tw-font-weight: var(--font-weight-normal);
+    font-weight: var(--font-weight-normal);
+    --tw-tracking: 0px;
+    letter-spacing: 0px;
+  }
+  .card-container {
+    display: flex;
+    height: var(--card-height);
+    width: calc(var(--spacing) * 81.75);
+    flex-direction: column;
+    justify-content: flex-end;
+    border-radius: var(--radius-2xl);
+    background-position: right top;
+    background-repeat: no-repeat;
+  }
+  .card-data {
+    display: flex;
+    height: calc(var(--card-height) * 0.7);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    border-radius: var(--radius-2xl);
+    background-color: var(--color-navy-800);
+    padding-inline: calc(var(--spacing) * 6);
+    padding-block: calc(var(--spacing) * 7);
+  }
   .attribution {
     text-align: center;
     font-size: var(--text-xs);
     line-height: var(--tw-leading, var(--text-xs--line-height));
   }
   .attribution a {
-    color: var(--color-blue-400);
+    color: var(--color-navy-200);
+  }
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-leading {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-tracking {
+  syntax: "*";
+  inherits: false;
+}
+@layer properties {
+  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
+    *, ::before, ::after, ::backdrop {
+      --tw-border-style: solid;
+      --tw-outline-style: solid;
+      --tw-leading: initial;
+      --tw-font-weight: initial;
+      --tw-tracking: initial;
+    }
   }
 }

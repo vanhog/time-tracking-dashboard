@@ -16,11 +16,50 @@
 
     <link rel="stylesheet" href="./styles/tw.css" />
   </head>
-  <body>
-    Report for Jeremy Robson Daily Weekly Monthly Work 5hrs
-    <!-- daily -->
-    Previous - 7hrs
-    <!-- daily -->
+  <body class="bg-navy-950">
+    <h1 class="sr-only">Time Tracking Dashboard</h1>
+    Report for Jeremy Robson Daily Weekly Monthly
+    <section
+      id="dashboard"
+      class="flex flex-col justify-center items-center h-screen"
+    >
+      <article class="text-white">jason</article>
+      <article
+        id="tracking-container"
+        class="flex flex-col justify-center items-center"
+      >
+        <!-- CARD -->
+        <div
+          id="card-container"
+          class="bg-orange-300a bg-[url('/images/icon-work.svg')] card-container"
+        >
+          <div id="card-data" class="card-data">
+            <div
+              id="card-header"
+              class="flex flex-row justify-between items-center w-full text-preset-5m text-white"
+            >
+              <div id="category">Work</div>
+              <div>...</div>
+            </div>
+            <div
+              id="card-time"
+              class="flex flex-row justify-between items-center w-full text-white"
+            >
+              <div class="text-preset-3">
+                <span id="card-hours-current">5hrs</span>
+              </div>
+
+              <!-- daily -->
+              <div class="text-navy-200">
+                <span id="card-hours-previous">Previous - 7hrs</span>
+              </div>
+              <!-- daily -->
+            </div>
+          </div>
+        </div>
+        <!-- CARD END-->
+      </article>
+    </section>
     32hrs
     <!-- weekly -->
     Previous - 36hrs
@@ -119,6 +158,6 @@
       </p>
       <p>For training use only. Do not use in production. No warranty.</p>
     </div>
-    <script type="module" src="./src/main.ts"></script>
   </footer>
+  <script src="./src/script.js"></script>
 </html>

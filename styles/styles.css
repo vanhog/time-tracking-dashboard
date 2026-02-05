@@ -1,10 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 @import 'tailwindcss';
 
+@theme {
+  /* font */
+  --font-rubik: 'Rubik', sans-serif;
+
+  /* Base */
+  --color-white: oklch(100% 0 0);
+  --color-black: oklch(0% 0 0);
+
+  --color-navy-950: oklch(21.4% 0.03 257);
+  --color-navy-900: oklch(30.2% 0.07 271);
+  --color-navy-800: oklch(41.8% 0.1 271);
+  --color-navy-200: oklch(83.7% 0.09 276);
+
+  --color-orange-300a: oklch(74.5% 0.17 55);
+  --color-orange-bg: #ff8b64;
+
+  --color-purple-700: oklch(49.3% 0.27 305);
+  --color-purple-600: oklch(55.8% 0.29 304);
+  --color-purple-500: oklch(62.3% 0.14 277);
+
+  --color-blue-300: oklch(73.4% 0.15 219);
+
+  --color-pink-400: oklch(65.4% 0.25 15);
+
+  --color-green-400: oklch(72.1% 0.23 153);
+
+  --color-yellow-300: oklch(86.5% 0.18 90);
+
+  --color-grey-200: oklch(88.6% 0.01 0);
+
+  --card-height: 10rem;
+}
+
 @layer components {
+  * {
+    @apply font-rubik;
+  }
+  /* Text Preset 1 — Rubik Light, 56 / 66, tracking 0 */
+  .text-preset-1 {
+    @apply font-rubik font-light text-[56px] leading-[66px] tracking-[0px];
+  }
+
+  /* Text Preset 2 — Rubik Light, 40 / 47, tracking 0 */
+  .text-preset-2 {
+    @apply font-rubik font-light text-[40px] leading-[47px] tracking-[0px];
+  }
+
+  /* Text Preset 3 — Rubik Light, 32 / 38, tracking 0 */
+  .text-preset-3 {
+    @apply font-rubik font-light text-[32px] leading-9 tracking-normal;
+  }
+
+  /* Text Preset 4 — Rubik Light, 24 / 28, tracking 0 */
+  .text-preset-4 {
+    @apply font-rubik font-light text-[24px] leading-[28px] tracking-[0px];
+  }
+
+  /* Text Preset 5 (Medium) — Rubik Medium, 18 / 21, tracking 0 */
+  .text-preset-5m {
+    @apply font-rubik font-medium text-[18px] leading-5.25 tracking-normal;
+  }
+
+  /* Text Preset 5 (Regular) — Rubik Regular, 18 / 21, tracking 0 */
+  .text-preset-5 {
+    @apply font-rubik font-normal text-[18px] leading-[21px] tracking-[0px];
+  }
+
+  /* Text Preset 6 — Rubik Regular, 15 / 18, tracking 0 */
+  .text-preset-6 {
+    @apply font-rubik font-normal text-[15px] leading-[18px] tracking-[0px];
+  }
+
+  .card-container {
+    @apply bg-top-right bg-no-repeat h-(--card-height) w-81.75 flex flex-col justify-end rounded-2xl;
+  }
+
+  .card-data {
+    @apply bg-navy-800 rounded-2xl flex flex-col justify-end items-start h-[calc(var(--card-height)*0.7)] px-6 py-7;
+  }
+
+  .card-data-header {
+    @apply flex flex-row justify-between items-center w-full text-preset-5m text-white;
+  }
+
   .attribution {
     @apply text-xs text-center;
   }
   .attribution a {
-    @apply text-blue-400;
+    @apply text-navy-200;
   }
 }
