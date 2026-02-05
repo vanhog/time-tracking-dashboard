@@ -1,0 +1,10 @@
+@import 'tailwindcss';
+
+@layer components {
+  .attribution {
+    @apply text-xs text-center;
+  }
+  .attribution a {
+    @apply text-blue-400;
+  }
+}
