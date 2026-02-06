@@ -74,7 +74,7 @@
   }
 
   .card-container {
-    @apply bg-top-right bg-no-repeat h-(--card-height) w-81.75 flex flex-col justify-end rounded-2xl;
+    @apply bg-top-right bg-no-repeat h-(--card-height) w-81.75 flex flex-col justify-end rounded-2xl m-1;
   }
 
   .card-data {
@@ -82,13 +82,13 @@
   }
 
   .card-data-header {
-    @apply flex flex-row justify-between items-center w-full text-preset-5m text-white;
+    @apply flex flex-row justify-between items-center w-full font-rubik font-medium text-[18px] leading-5.25 tracking-normal text-white;
   }
 
   .attribution {
-    @apply text-xs text-center;
+    @apply text-xs text-center text-navy-200;
   }
   .attribution a {
-    @apply text-navy-200;
+    @apply text-navy-800;
   }
 }

@@ -17,147 +17,74 @@
     <link rel="stylesheet" href="./styles/tw.css" />
   </head>
   <body class="bg-navy-950">
-    <h1 class="sr-only">Time Tracking Dashboard</h1>
-    Report for Jeremy Robson Daily Weekly Monthly
-    <section
-      id="dashboard"
-      class="flex flex-col justify-center items-center h-screen"
-    >
-      <article class="text-white">jason</article>
-      <article
-        id="tracking-container"
-        class="flex flex-col justify-center items-center"
-      >
-        <!-- CARD -->
-        <div
-          id="card-container"
-          class="bg-orange-300a bg-[url('/images/icon-work.svg')] card-container"
+    <main>
+      <h1 class="sr-only">Time Tracking Dashboard</h1>
+      Report for Jeremy Robson Daily Weekly Monthly
+      <section id="dashboard" class="flex flex-col justify-center items-center">
+        <article class="text-white">jason</article>
+        <article
+          id="tracking-container"
+          class="flex flex-col justify-center items-center"
         >
-          <div id="card-data" class="card-data">
-            <div
-              id="card-header"
-              class="flex flex-row justify-between items-center w-full text-preset-5m text-white"
-            >
-              <div id="category">Work</div>
-              <div>...</div>
-            </div>
-            <div
-              id="card-time"
-              class="flex flex-row justify-between items-center w-full text-white"
-            >
-              <div class="text-preset-3">
-                <span id="card-hours-current">5hrs</span>
+          <!-- CARD -->
+          <div
+            id="card-container"
+            class="bg-orange-300a bg-[url('/images/icon-work.svg')] card-container"
+          >
+            <div id="card-data" class="card-data">
+              <div
+                id="card-header"
+                class="flex flex-row justify-between items-center w-full text-preset-5m text-white"
+              >
+                <div id="category">Work</div>
+                <div>...</div>
               </div>
+              <div
+                id="card-data-time"
+                class="flex flex-row justify-between items-center w-full text-white"
+              >
+                <div id="card-data-time-hours-current" class="text-preset-3">
+                  5hrs
+                </div>
 
-              <!-- daily -->
-              <div class="text-navy-200">
-                <span id="card-hours-previous">Previous - 7hrs</span>
+                <!-- daily -->
+                <div id="card-data-time-hours-previous" class="text-navy-200">
+                  Previous - 7hrs
+                </div>
+                <!-- daily -->
               </div>
-              <!-- daily -->
             </div>
           </div>
-        </div>
-        <!-- CARD END-->
-      </article>
-    </section>
-    32hrs
-    <!-- weekly -->
-    Previous - 36hrs
-    <!-- weekly -->
-    103hrs
-    <!-- monthly -->
-    Previous - 128hrs
-    <!-- monthly -->
-
-    Play 1hr
-    <!-- daily -->
-    Previous - 2hrs
-    <!-- daily -->
-    10hrs
-    <!-- weekly -->
-    Previous - 8hrs
-    <!-- weekly -->
-    23hrs
-    <!-- monthly -->
-    Previous - 29hrs
-    <!-- monthly -->
-
-    Study 0hrs
-    <!-- daily -->
-    Previous - 1hr
-    <!-- daily -->
-    4hrs
-    <!-- weekly -->
-    Previous - 7hrs
-    <!-- weekly -->
-    13hrs
-    <!-- monthly -->
-    Previous - 19hrs
-    <!-- monthly -->
-
-    Exercise 1hr
-    <!-- daily -->
-    Previous - 1hr
-    <!-- daily -->
-    4hrs
-    <!-- weekly -->
-    Previous - 5hrs
-    <!-- weekly -->
-    11hrs
-    <!-- monthly -->
-    Previous - 18hrs
-    <!-- monthly -->
-
-    Social 1hr
-    <!-- daily -->
-    Previous - 3hrs
-    <!-- daily -->
-    5hrs
-    <!-- weekly -->
-    Previous - 10hrs
-    <!-- weekly -->
-    21hrs
-    <!-- monthly -->
-    Previous - 23hrs
-    <!-- monthly -->
-
-    Self Care 0hrs
-    <!-- daily -->
-    Previous - 1hr
-    <!-- daily -->
-    2hrs
-    <!-- weekly -->
-    Previous - 2hrs
-    <!-- weekly -->
-    7hrs
-    <!-- monthly -->
-    Previous - 11hrs
-    <!-- monthly -->
+          <!-- CARD END-->
+        </article>
+      </section>
+    </main>
+    <footer class="mt-12">
+      <h2 class="sr-only">Attributions</h2>
+      <div class="attribution mt-6">
+        Challenge by
+        <a
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Frontend Mentor</a
+        >. Coded by
+        <a
+          href="https://github.com/vanhog"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Dieter H. Hoogestraat (dee van hog)</a
+        >. <br />
+        <p>
+          Source code:
+          <a href="https://github.com/vanhog/guess-a-number"
+            >https://github.com/vanhog/guess-a-number</a
+          >
+        </p>
+        <p>For training use only. Do not use in production. No warranty.</p>
+      </div>
+    </footer>
   </body>
-  <footer>
-    <h2 class="sr-only">Attributions</h2>
-    <div class="attribution mt-6">
-      Challenge by
-      <a
-        href="https://www.frontendmentor.io?ref=challenge"
-        target="_blank"
-        rel="noopener noreferrer"
-        >Frontend Mentor</a
-      >. Coded by
-      <a
-        href="https://github.com/vanhog"
-        target="_blank"
-        rel="noopener noreferrer"
-        >Dieter H. Hoogestraat (dee van hog)</a
-      >. <br />
-      <p>
-        Source code:
-        <a href="https://github.com/vanhog/guess-a-number"
-          >https://github.com/vanhog/guess-a-number</a
-        >
-      </p>
-      <p>For training use only. Do not use in production. No warranty.</p>
-    </div>
-  </footer>
+
   <script src="./src/script.js"></script>
 </html>

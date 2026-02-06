@@ -190,50 +190,17 @@
   .static {
     position: static;
   }
-  .container {
-    width: 100%;
-    @media (width >= 40rem) {
-      max-width: 40rem;
-    }
-    @media (width >= 48rem) {
-      max-width: 48rem;
-    }
-    @media (width >= 64rem) {
-      max-width: 64rem;
-    }
-    @media (width >= 80rem) {
-      max-width: 80rem;
-    }
-    @media (width >= 96rem) {
-      max-width: 96rem;
-    }
-  }
   .mt-6 {
     margin-top: calc(var(--spacing) * 6);
+  }
+  .mt-12 {
+    margin-top: calc(var(--spacing) * 12);
   }
   .flex {
     display: flex;
   }
-  .table {
-    display: table;
-  }
-  .h-30 {
-    height: calc(var(--spacing) * 30);
-  }
-  .h-screen {
-    height: 100vh;
-  }
-  .w-50 {
-    width: calc(var(--spacing) * 50);
-  }
   .w-full {
     width: 100%;
-  }
-  .border-collapse {
-    border-collapse: collapse;
-  }
-  .resize {
-    resize: both;
   }
   .flex-col {
     flex-direction: column;
@@ -250,34 +217,41 @@
   .justify-center {
     justify-content: center;
   }
-  .border {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
-  }
   .bg-navy-950 {
     background-color: var(--color-navy-950);
   }
   .bg-orange-300a {
     background-color: var(--color-orange-300a);
   }
-  .bg-\[url\(\'\$\{category\.icon\}\'\)\] {
-    background-image: url('${category.icon}');
+  .bg-\[url\(\'\$\{icon\}\'\)\] {
+    background-image: url('${icon}');
   }
   .bg-\[url\(\'\/images\/icon-work\.svg\'\)\] {
     background-image: url('/images/icon-work.svg');
+  }
+  .font-rubik {
+    font-family: var(--font-rubik);
+  }
+  .text-\[18px\] {
+    font-size: 18px;
+  }
+  .leading-5\.25 {
+    --tw-leading: calc(var(--spacing) * 5.25);
+    line-height: calc(var(--spacing) * 5.25);
+  }
+  .font-medium {
+    --tw-font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-medium);
+  }
+  .tracking-normal {
+    --tw-tracking: var(--tracking-normal);
+    letter-spacing: var(--tracking-normal);
   }
   .text-navy-200 {
     color: var(--color-navy-200);
   }
   .text-white {
     color: var(--color-white);
-  }
-  .underline {
-    text-decoration-line: underline;
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
   }
 }
 @layer components {
@@ -355,6 +329,7 @@
     letter-spacing: 0px;
   }
   .card-container {
+    margin: calc(var(--spacing) * 1);
     display: flex;
     height: var(--card-height);
     width: calc(var(--spacing) * 81.75);
@@ -375,24 +350,31 @@
     padding-inline: calc(var(--spacing) * 6);
     padding-block: calc(var(--spacing) * 7);
   }
+  .card-data-header {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-family: var(--font-rubik);
+    font-size: 18px;
+    --tw-leading: calc(var(--spacing) * 5.25);
+    line-height: calc(var(--spacing) * 5.25);
+    --tw-font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-medium);
+    --tw-tracking: var(--tracking-normal);
+    letter-spacing: var(--tracking-normal);
+    color: var(--color-white);
+  }
   .attribution {
     text-align: center;
     font-size: var(--text-xs);
     line-height: var(--tw-leading, var(--text-xs--line-height));
-  }
-  .attribution a {
     color: var(--color-navy-200);
   }
-}
-@property --tw-border-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
+  .attribution a {
+    color: var(--color-navy-800);
+  }
 }
 @property --tw-leading {
   syntax: "*";
@@ -409,8 +391,6 @@
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
-      --tw-border-style: solid;
-      --tw-outline-style: solid;
       --tw-leading: initial;
       --tw-font-weight: initial;
       --tw-tracking: initial;
