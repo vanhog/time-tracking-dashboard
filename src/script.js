@@ -34,7 +34,7 @@ cardDataTimeClasses = [
   'text-white',
 ];
 
-let dashboard = document.getElementById('tracking-container');
+let trackingContainer = document.getElementById('tracking-container');
 
 function makeCard(name, color, icon, hrsCurrent, hrsPrevious) {
   let card = document.createElement('div');
@@ -85,8 +85,11 @@ function populateDashboard(inTimeframe) {
       return response.json();
     })
     .then((data) => {
+      if (trackingContainer.hasChildNodes()) {
+        trackingContainer.innerHTML = '';
+      }
       data.forEach((element) => {
-        dashboard.appendChild(
+        trackingContainer.appendChild(
           makeCard(
             element.title,
             category.color,
@@ -98,5 +101,21 @@ function populateDashboard(inTimeframe) {
       });
     });
 }
+
+const daily = document.getElementById('daily').addEventListener('click', () => {
+  populateDashboard('daily');
+});
+
+const weekly = document
+  .getElementById('weekly')
+  .addEventListener('click', () => {
+    populateDashboard('weekly');
+  });
+
+const monthly = document
+  .getElementById('monthly')
+  .addEventListener('click', () => {
+    populateDashboard('monthly');
+  });
 
 populateDashboard('weekly');
