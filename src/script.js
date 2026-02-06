@@ -1,7 +1,14 @@
 const category = {
-  name: 'Work',
-  icon: '/images/icon-work.svg',
-  color: 'bg-orange-300a',
+  Work: { icon: '/images/icon-work.svg', color: 'bg-orange-300a' },
+  Play: { icon: '/images/icon-play.svg', color: 'bg-navy-200' },
+  Study: { icon: '/images/icon-study.svg', color: 'bg-pink-300' },
+  Exercise: { icon: '/images/icon-exercise.svg', color: 'bg-green-400' },
+  Social: { icon: '/images/icon-social.svg', color: 'bg-purple-400' },
+  'Self Care': { icon: '/images/icon-self-care.svg', color: 'bg-yellow-300' },
+};
+var defaultsettings = {
+  ajaxsettings: { ak1: 'v1', ak2: 'v2' },
+  uisettings: { ui1: 'v1', ui22: 'v2' },
 };
 
 cardDataHeaderClasses = [
@@ -27,12 +34,12 @@ cardDataTimeClasses = [
   'text-white',
 ];
 
-let dashboard = document.getElementById('dashboard');
+let dashboard = document.getElementById('tracking-container');
 
 function makeCard(name, color, icon, hrsCurrent, hrsPrevious) {
   let card = document.createElement('div');
-  card.classList.add(`bg-[url('${icon}')]`); // ICON
-  card.classList.add(color); // COLOR
+  card.classList.add(`bg-[url('${category[name].icon}')]`); // ICON
+  card.classList.add(category[name].color); // COLOR
   card.classList.add('card-container');
 
   let cardData = document.createElement('div');
@@ -70,35 +77,26 @@ function makeCard(name, color, icon, hrsCurrent, hrsPrevious) {
   return card;
 }
 
-dashboard.appendChild(
-  makeCard(category.name, category.color, category.icon, '5', '7'),
-);
-let timeframe = 'daily';
+function populateDashboard(inTimeframe) {
+  fetch('/data.json')
+    .then((response) => {
+      if (!response.ok) return console.log('Oops! Something went wrong.');
 
-function dummyLog(inKrams) {
-  console.log(inKrams);
-}
-
-fetch('/data.json')
-  .then((response) => {
-    if (!response.ok) return console.log('Oops! Something went wrong.');
-
-    return response.json();
-  })
-  .then((data) => {
-    console.log(data);
-    if (timeframe === 'daily') {
+      return response.json();
+    })
+    .then((data) => {
       data.forEach((element) => {
         dashboard.appendChild(
           makeCard(
             element.title,
             category.color,
             category.icon,
-            element.timeframes.daily.current,
-            element.timeframes.daily.previous,
+            element.timeframes[inTimeframe].current,
+            element.timeframes[inTimeframe].previous,
           ),
         );
-        dummyLog(element.timeframes.daily.current);
       });
-    }
-  });
+    });
+}
+
+populateDashboard('weekly');
