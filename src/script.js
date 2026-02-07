@@ -6,10 +6,6 @@ const category = {
   Social: { icon: '/images/icon-social.svg', color: 'bg-purple-400' },
   'Self Care': { icon: '/images/icon-self-care.svg', color: 'bg-yellow-300' },
 };
-var defaultsettings = {
-  ajaxsettings: { ak1: 'v1', ak2: 'v2' },
-  uisettings: { ui1: 'v1', ui22: 'v2' },
-};
 
 cardDataHeaderClasses = [
   'flex',
@@ -19,7 +15,7 @@ cardDataHeaderClasses = [
   'w-full',
   'font-rubik',
   'font-medium',
-  'text-[18px]',
+  'text-[1.25rem]',
   'leading-5.25',
   'tracking-normal',
   'text-white',
@@ -50,10 +46,14 @@ function makeCard(name, color, icon, hrsCurrent, hrsPrevious) {
     cardDataHeader.classList.add(element);
   });
 
-  let cardDataHeaderCategory = document.createElement('div');
+  let cardDataHeaderCategory = document.createElement('h2');
   cardDataHeaderCategory.innerText = name; // NAME
-  let cardDataHeaderDots = document.createElement('div');
-  cardDataHeaderDots.innerText = '...';
+  let cardDataHeaderDots = document.createElement('button');
+  cardDataHeaderDots.setAttribute('aria-label', 'Open options');
+  cardDataHeaderDots.setAttribute('aria-haspopup', 'menu');
+  cardDataHeaderDots.setAttribute('aria-expanded', 'false');
+  cardDataHeaderDots.innerHTML =
+    '<span class="hover:font-bold" aria-hidden="true">...</span>';
   cardDataHeader.appendChild(cardDataHeaderCategory);
   cardDataHeader.appendChild(cardDataHeaderDots);
   cardData.appendChild(cardDataHeader);
@@ -67,8 +67,9 @@ function makeCard(name, color, icon, hrsCurrent, hrsPrevious) {
   cardDataTimeHoursCurent.classList.add('text-preset-3');
   let cardDataTimeHoursPrevious = document.createElement('div');
   cardDataTimeHoursPrevious.classList.add('text-navy-200');
-  cardDataTimeHoursCurent.innerText = hrsCurrent + 'hrs';
-  cardDataTimeHoursPrevious.innerText = 'Previous - ' + hrsPrevious + 'hrs';
+  cardDataTimeHoursCurent.innerHTML = `<span class="sr-only">Current - </span>${hrsCurrent}<span class="sr-only">hours</span><span aria-hidden="true">hrs</span>`;
+
+  cardDataTimeHoursPrevious.innerHTML = `Previous - ${hrsPrevious}<span class="sr-only">hours</span><span aria-hidden="true">hrs</span>`;
   cardDataTime.appendChild(cardDataTimeHoursCurent);
   cardDataTime.appendChild(cardDataTimeHoursPrevious);
   cardData.appendChild(cardDataTime);
@@ -77,7 +78,7 @@ function makeCard(name, color, icon, hrsCurrent, hrsPrevious) {
   return card;
 }
 
-function populateDashboard(inTimeframe) {
+function populateTrackingContainer(inTimeframe) {
   fetch('/data.json')
     .then((response) => {
       if (!response.ok) return console.log('Oops! Something went wrong.');
@@ -103,19 +104,19 @@ function populateDashboard(inTimeframe) {
 }
 
 const daily = document.getElementById('daily').addEventListener('click', () => {
-  populateDashboard('daily');
+  populateTrackingContainer('daily');
 });
 
 const weekly = document
   .getElementById('weekly')
   .addEventListener('click', () => {
-    populateDashboard('weekly');
+    populateTrackingContainer('weekly');
   });
 
 const monthly = document
   .getElementById('monthly')
   .addEventListener('click', () => {
-    populateDashboard('monthly');
+    populateTrackingContainer('monthly');
   });
 
-populateDashboard('weekly');
+populateTrackingContainer('weekly');
