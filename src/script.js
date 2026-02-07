@@ -40,6 +40,7 @@ function makeCard(name, color, icon, hrsCurrent, hrsPrevious) {
 
   let cardData = document.createElement('div');
   cardData.classList.add('card-data');
+  cardData.setAttribute('tabindex', '0');
   let cardDataHeader = document.createElement('div');
 
   cardDataHeaderClasses.forEach((element) => {
@@ -53,7 +54,7 @@ function makeCard(name, color, icon, hrsCurrent, hrsPrevious) {
   cardDataHeaderDots.setAttribute('aria-haspopup', 'menu');
   cardDataHeaderDots.setAttribute('aria-expanded', 'false');
   cardDataHeaderDots.innerHTML =
-    '<span class="hover:font-bold" aria-hidden="true">...</span>';
+    '<span class="hover:font-bold text-3xl" aria-hidden="true">...</span>';
   cardDataHeader.appendChild(cardDataHeaderCategory);
   cardDataHeader.appendChild(cardDataHeaderDots);
   cardData.appendChild(cardDataHeader);

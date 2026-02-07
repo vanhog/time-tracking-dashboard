@@ -16,6 +16,8 @@
     --spacing: 0.25rem;
     --text-xs: 0.75rem;
     --text-xs--line-height: calc(1 / 0.75);
+    --text-3xl: 1.875rem;
+    --text-3xl--line-height: calc(2.25 / 1.875);
     --font-weight-light: 300;
     --font-weight-normal: 400;
     --font-weight-medium: 500;
@@ -200,9 +202,6 @@
   .m-1 {
     margin: calc(var(--spacing) * 1);
   }
-  .my-2 {
-    margin-block: calc(var(--spacing) * 2);
-  }
   .ms-5 {
     margin-inline-start: calc(var(--spacing) * 5);
   }
@@ -217,9 +216,6 @@
   }
   .table {
     display: table;
-  }
-  .h-\(--card-height\) {
-    height: var(--card-height);
   }
   .w-16 {
     width: calc(var(--spacing) * 16);
@@ -328,12 +324,6 @@
   .p-4 {
     padding: calc(var(--spacing) * 4);
   }
-  .p-5 {
-    padding: calc(var(--spacing) * 5);
-  }
-  .p-12 {
-    padding: calc(var(--spacing) * 12);
-  }
   .px-6 {
     padding-inline: calc(var(--spacing) * 6);
   }
@@ -343,11 +333,12 @@
   .font-rubik {
     font-family: var(--font-rubik);
   }
+  .text-3xl {
+    font-size: var(--text-3xl);
+    line-height: var(--tw-leading, var(--text-3xl--line-height));
+  }
   .text-\[1\.25rem\] {
     font-size: 1.25rem;
-  }
-  .text-\[18px\] {
-    font-size: 18px;
   }
   .leading-5 {
     --tw-leading: calc(var(--spacing) * 5);
@@ -479,9 +470,12 @@
     align-items: flex-start;
     justify-content: flex-end;
     border-radius: var(--radius-2xl);
-    background-color: var(--color-navy-800);
+    background-color: var(--color-navy-900);
     padding-inline: calc(var(--spacing) * 6);
     padding-block: calc(var(--spacing) * 7);
+    &:active {
+      background-color: var(--color-navy-800);
+    }
   }
   .card-data-header {
     display: flex;

@@ -79,7 +79,7 @@
   }
 
   .card-data {
-    @apply bg-navy-800 rounded-2xl flex flex-col justify-end items-start h-[calc(var(--card-height)*0.7)] px-6 py-7;
+    @apply bg-navy-900 active:bg-navy-800 rounded-2xl flex flex-col justify-end items-start h-[calc(var(--card-height)*0.7)] px-6 py-7;
   }
 
   .card-data-header {
