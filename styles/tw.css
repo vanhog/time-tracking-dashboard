@@ -213,23 +213,14 @@
   .mb-8 {
     margin-bottom: calc(var(--spacing) * 8);
   }
-  .mb-12 {
-    margin-bottom: calc(var(--spacing) * 12);
-  }
   .contents {
     display: contents;
   }
   .flex {
     display: flex;
   }
-  .table {
-    display: table;
-  }
   .w-16 {
     width: calc(var(--spacing) * 16);
-  }
-  .w-81 {
-    width: calc(var(--spacing) * 81);
   }
   .w-81\.75 {
     width: calc(var(--spacing) * 81.75);
@@ -237,20 +228,11 @@
   .w-full {
     width: 100%;
   }
-  .border-collapse {
-    border-collapse: collapse;
-  }
-  .resize {
-    resize: both;
-  }
   .flex-col {
     flex-direction: column;
   }
   .flex-row {
     flex-direction: row;
-  }
-  .flex-wrap {
-    flex-wrap: wrap;
   }
   .items-center {
     align-items: center;
@@ -275,10 +257,6 @@
   }
   .rounded-full {
     border-radius: calc(infinity * 1px);
-  }
-  .border {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
   }
   .border-4 {
     border-style: var(--tw-border-style);
@@ -317,24 +295,6 @@
   .bg-\[url\(\'\$\{category\[name\]\.icon\}\'\)\] {
     background-image: url('${category[name].icon}');
   }
-  .bg-\[url\(\'\.\.\/images\/icon-exercise\.svg\'\)\] {
-    background-image: url('../images/icon-exercise.svg');
-  }
-  .bg-\[url\(\'\.\.\/images\/icon-play\.svg\'\)\] {
-    background-image: url('../images/icon-play.svg');
-  }
-  .bg-\[url\(\'\.\.\/images\/icon-self-care\.svg\'\)\] {
-    background-image: url('../images/icon-self-care.svg');
-  }
-  .bg-\[url\(\'\.\.\/images\/icon-social\.svg\'\)\] {
-    background-image: url('../images/icon-social.svg');
-  }
-  .bg-\[url\(\'\.\.\/images\/icon-study\.svg\'\)\] {
-    background-image: url('../images/icon-study.svg');
-  }
-  .bg-\[url\(\'\.\.\/images\/icon-work\.svg\'\)\] {
-    background-image: url('../images/icon-work.svg');
-  }
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
   }
@@ -366,10 +326,6 @@
   .text-\[1\.25rem\] {
     font-size: 1.25rem;
   }
-  .leading-5 {
-    --tw-leading: calc(var(--spacing) * 5);
-    line-height: calc(var(--spacing) * 5);
-  }
   .leading-5\.25 {
     --tw-leading: calc(var(--spacing) * 5.25);
     line-height: calc(var(--spacing) * 5.25);
@@ -390,13 +346,6 @@
   }
   .text-white {
     color: var(--color-white);
-  }
-  .underline {
-    text-decoration-line: underline;
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
   }
   .hover\:font-bold {
     &:hover {
@@ -693,11 +642,6 @@
   syntax: "*";
   inherits: false;
 }
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
@@ -705,7 +649,6 @@
       --tw-leading: initial;
       --tw-font-weight: initial;
       --tw-tracking: initial;
-      --tw-outline-style: solid;
     }
   }
 }

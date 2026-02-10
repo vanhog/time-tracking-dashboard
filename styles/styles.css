@@ -2,10 +2,8 @@
 @import "tailwindcss";
 
 @theme {
-  /* font */
   --font-rubik: "Rubik", sans-serif;
 
-  /* Base */
   --color-white: oklch(100% 0 0);
   --color-black: oklch(0% 0 0);
 
