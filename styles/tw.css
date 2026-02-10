@@ -198,35 +198,32 @@
     white-space: nowrap;
     border-width: 0;
   }
-  .static {
-    position: static;
-  }
   .m-1 {
     margin: calc(var(--spacing) * 1);
   }
   .ms-5 {
     margin-inline-start: calc(var(--spacing) * 5);
   }
-  .mt-4 {
-    margin-top: calc(var(--spacing) * 4);
-  }
   .mt-6 {
     margin-top: calc(var(--spacing) * 6);
   }
-  .mt-8 {
-    margin-top: calc(var(--spacing) * 8);
-  }
   .mt-12 {
     margin-top: calc(var(--spacing) * 12);
+  }
+  .mb-8 {
+    margin-bottom: calc(var(--spacing) * 8);
+  }
+  .mb-12 {
+    margin-bottom: calc(var(--spacing) * 12);
+  }
+  .contents {
+    display: contents;
   }
   .flex {
     display: flex;
   }
   .table {
     display: table;
-  }
-  .h-screen {
-    height: 100vh;
   }
   .w-16 {
     width: calc(var(--spacing) * 16);
@@ -272,9 +269,6 @@
   }
   .justify-start {
     justify-content: flex-start;
-  }
-  .gap-5 {
-    gap: calc(var(--spacing) * 5);
   }
   .rounded-2xl {
     border-radius: var(--radius-2xl);
@@ -341,18 +335,6 @@
   .bg-\[url\(\'\.\.\/images\/icon-work\.svg\'\)\] {
     background-image: url('../images/icon-work.svg');
   }
-  .bg-\[url\(\'\.\/images\/icon-work\.svg\'\)\] {
-    background-image: url('./images/icon-work.svg');
-  }
-  .bg-\[url\(\'images\/icon-work\.svg\'\)\] {
-    background-image: url('images/icon-work.svg');
-  }
-  .bg-\[url\(\'images\/icon\.work\.svg\'\)\] {
-    background-image: url('images/icon.work.svg');
-  }
-  .p-4 {
-    padding: calc(var(--spacing) * 4);
-  }
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
   }
@@ -364,6 +346,9 @@
   }
   .pt-4 {
     padding-top: calc(var(--spacing) * 4);
+  }
+  .pt-5 {
+    padding-top: calc(var(--spacing) * 5);
   }
   .pb-6 {
     padding-bottom: calc(var(--spacing) * 6);
@@ -479,11 +464,6 @@
       margin-top: calc(var(--spacing) * 5);
     }
   }
-  .lg\:h-\[calc\(var\(--card-height-sm\)\*1\.75\)\] {
-    @media (width >= 64rem) {
-      height: calc(var(--card-height-sm) * 1.75);
-    }
-  }
   .lg\:h-\[calc\(var\(--card-height-sm\)\*2\)\] {
     @media (width >= 64rem) {
       height: calc(var(--card-height-sm) * 2);
@@ -492,11 +472,6 @@
   .lg\:h-full {
     @media (width >= 64rem) {
       height: 100%;
-    }
-  }
-  .lg\:w-47 {
-    @media (width >= 64rem) {
-      width: calc(var(--spacing) * 47);
     }
   }
   .lg\:w-63\.75 {
@@ -532,21 +507,6 @@
   .lg\:justify-between {
     @media (width >= 64rem) {
       justify-content: space-between;
-    }
-  }
-  .lg\:justify-center {
-    @media (width >= 64rem) {
-      justify-content: center;
-    }
-  }
-  .lg\:justify-evenly {
-    @media (width >= 64rem) {
-      justify-content: space-evenly;
-    }
-  }
-  .lg\:justify-start {
-    @media (width >= 64rem) {
-      justify-content: flex-start;
     }
   }
   .lg\:gap-5 {

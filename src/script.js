@@ -7,7 +7,7 @@ const category = {
   "Self Care": { icon: "../images/icon-self-care.svg", color: "bg-yellow-300" },
 };
 
-cardDataHeaderClasses = [
+const cardDataHeaderClasses = [
   "flex",
   "flex-row",
   "justify-between",
@@ -21,7 +21,7 @@ cardDataHeaderClasses = [
   "text-white",
 ];
 
-cardDataTimeClasses = [
+const cardDataTimeClasses = [
   "flex",
   "flex-row",
   "justify-between",
@@ -147,3 +147,6 @@ const monthly = document
   });
 
 populateTrackingContainer("weekly");
+addClasses("weekly", ["text-white", "font-bold"]);
+removeClasses("daily", ["text-white", "font-bold"]);
+removeClasses("monthly", ["text-white", "font-bold"]);
