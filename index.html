@@ -19,42 +19,76 @@
   <body class="bg-navy-950">
     <main>
       <h1 class="sr-only">Time Tracking Dashboard</h1>
-
-      <section id="dashboard" class="flex flex-col justify-center items-center">
-        <article
-          id="user-container"
-          class="flex flex-col justify-center items-center"
+      <div
+        id="vertical-center-helper"
+        class="flex flex-col justify-center items-center md:h-screen"
+      >
+        <section
+          id="dashboard"
+          class="flex flex-col lg:flex-row justify-center items-center lg:gap-5"
         >
-          <div
-            class="w-81.75 md:w-153 flex flex-col justify-start rounded-2xl m-1 bg-navy-900"
+          <article
+            id="user-container"
+            class="flex flex-col justify-center items-center lg:h-full"
           >
-            <div class="bg-purple-600c rounded-2xl px-6 py-7">
-              <div class="flex flex-row justify-start items-center">
-                <img
-                  src="./images/image-jeremy.png"
-                  alt="Portrait of Jeremy"
-                  class="w-16 border-4 rounded-full border-white"
-                />
-                <p class="ms-5">
-                  <span class="text-preset-6 text-white"> Report for</span>
-                  <br />
-                  <span class="text-preset-4 text-white"> Jeremy Robson</span>
-                </p>
+            <div
+              class="w-81.75 md:w-153 lg:w-63.75 flex flex-col justify-start rounded-2xl m-1 bg-navy-900 lg:h-full"
+            >
+              <div
+                class="bg-purple-600c rounded-2xl px-6 py-7 lg:py-3 lg:h-[calc(var(--card-height-sm)*2)]"
+              >
+                <div
+                  class="flex flex-row lg:flex-col justify-start items-center lg:items-start"
+                >
+                  <img
+                    src="./images/image-jeremy.png"
+                    alt="Portrait of Jeremy"
+                    class="w-16 border-4 rounded-full border-white"
+                  />
+                  <p class="ms-5 lg:ms-0 text-left">
+                    <span class="text-preset-6 text-white text-left">
+                      Report for</span
+                    >
+                    <br />
+                    <span
+                      class="text-preset-4 lg:text-[40px] lg:leading-[47px] text-white text-left"
+                    >
+                      Jeremy Robson</span
+                    >
+                  </p>
+                </div>
               </div>
+              <nav
+                class="flex flex-row lg:flex-col justify-around lg:justify-around items-start text-white px-4 pt-4 lg:pt-1 pb-6 lg:gap-5 lg:mt-5"
+              >
+                <button
+                  id="daily"
+                  class="text-purple-500 hover:font-bold hover:text-white"
+                >
+                  Daily
+                </button>
+                <button
+                  id="weekly"
+                  class="text-purple-500 hover:font-bold hover:text-white"
+                >
+                  Weekly
+                </button>
+                <button
+                  id="monthly"
+                  class="text-purple-500 hover:font-bold hover:text-white"
+                >
+                  Monthly
+                </button>
+              </nav>
             </div>
-            <nav class="flex flex-row justify-around text-white p-4">
-              <button id="daily" class="hover:font-bold">Daily</button>
-              <button id="weekly" class="hover:font-bold">Weekly</button>
-              <button id="monthly" class="hover:font-bold">Monthly</button>
-            </nav>
-          </div>
-        </article>
+          </article>
 
-        <article
-          id="tracking-container"
-          class="flex flex-col justify-center items-center md:flex-row md:flex-wrap md:w-153 md:justify-between"
-        ></article>
-      </section>
+          <article
+            id="tracking-container"
+            class="flex flex-col justify-center items-center md:flex-row md:flex-wrap md:w-153 md:justify-between lg:justify-between lg:w-207.25 lg:gap-5 lg:h-full"
+          ></article>
+        </section>
+      </div>
     </main>
     <footer class="mt-12">
       <h2 class="sr-only">Attributions</h2>
