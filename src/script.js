@@ -1,10 +1,10 @@
 const category = {
-  Work: { icon: "./images/icon-work.svg", color: "bg-orange-300a" },
-  Play: { icon: "./images/icon-play.svg", color: "bg-navy-200" },
-  Study: { icon: "./images/icon-study.svg", color: "bg-pink-300" },
-  Exercise: { icon: "./images/icon-exercise.svg", color: "bg-green-400" },
-  Social: { icon: "./images/icon-social.svg", color: "bg-purple-400" },
-  "Self Care": { icon: "./images/icon-self-care.svg", color: "bg-yellow-300" },
+  Work: { icon: "../images/icon-work.svg", color: "bg-orange-300a" },
+  Play: { icon: "../images/icon-play.svg", color: "bg-navy-200" },
+  Study: { icon: "../images/icon-study.svg", color: "bg-pink-300" },
+  Exercise: { icon: "../images/icon-exercise.svg", color: "bg-green-400" },
+  Social: { icon: "../images/icon-social.svg", color: "bg-purple-400" },
+  "Self Care": { icon: "../images/icon-self-care.svg", color: "bg-yellow-300" },
 };
 
 cardDataHeaderClasses = [
