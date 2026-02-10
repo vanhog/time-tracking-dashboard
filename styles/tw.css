@@ -323,6 +323,33 @@
   .bg-\[url\(\'\$\{category\[name\]\.icon\}\'\)\] {
     background-image: url('${category[name].icon}');
   }
+  .bg-\[url\(\'\.\.\/images\/icon-exercise\.svg\'\)\] {
+    background-image: url('../images/icon-exercise.svg');
+  }
+  .bg-\[url\(\'\.\.\/images\/icon-play\.svg\'\)\] {
+    background-image: url('../images/icon-play.svg');
+  }
+  .bg-\[url\(\'\.\.\/images\/icon-self-care\.svg\'\)\] {
+    background-image: url('../images/icon-self-care.svg');
+  }
+  .bg-\[url\(\'\.\.\/images\/icon-social\.svg\'\)\] {
+    background-image: url('../images/icon-social.svg');
+  }
+  .bg-\[url\(\'\.\.\/images\/icon-study\.svg\'\)\] {
+    background-image: url('../images/icon-study.svg');
+  }
+  .bg-\[url\(\'\.\.\/images\/icon-work\.svg\'\)\] {
+    background-image: url('../images/icon-work.svg');
+  }
+  .bg-\[url\(\'\.\/images\/icon-work\.svg\'\)\] {
+    background-image: url('./images/icon-work.svg');
+  }
+  .bg-\[url\(\'images\/icon-work\.svg\'\)\] {
+    background-image: url('images/icon-work.svg');
+  }
+  .bg-\[url\(\'images\/icon\.work\.svg\'\)\] {
+    background-image: url('images/icon.work.svg');
+  }
   .p-4 {
     padding: calc(var(--spacing) * 4);
   }
