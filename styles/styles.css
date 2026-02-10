@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
-@import 'tailwindcss';
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+@import "tailwindcss";
 
 @theme {
   /* font */
-  --font-rubik: 'Rubik', sans-serif;
+  --font-rubik: "Rubik", sans-serif;
 
   /* Base */
   --color-white: oklch(100% 0 0);
@@ -75,7 +75,7 @@
   }
 
   .card-container {
-    @apply bg-top-right bg-no-repeat h-(--card-height) w-81.75 flex flex-col justify-end rounded-2xl m-1;
+    @apply bg-top-right bg-no-repeat h-(--card-height) w-81.75 md:w-47 flex flex-col justify-end rounded-2xl m-1;
   }
 
   .card-data {
