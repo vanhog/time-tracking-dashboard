@@ -108,20 +108,42 @@ function populateTrackingContainer(inTimeframe) {
     });
 }
 
+function addClasses(node, classes = []) {
+  const element = document.getElementById(node);
+  classes.forEach((clss) => {
+    element.classList.add(clss);
+  });
+}
+
+function removeClasses(node, classes = []) {
+  const element = document.getElementById(node);
+  classes.forEach((clss) => {
+    element.classList.remove(clss);
+  });
+}
 const daily = document.getElementById("daily").addEventListener("click", () => {
   populateTrackingContainer("daily");
+  addClasses("daily", ["text-white", "font-bold"]);
+  removeClasses("weekly", ["text-white", "font-bold"]);
+  removeClasses("monthly", ["text-white", "font-bold"]);
 });
 
 const weekly = document
   .getElementById("weekly")
   .addEventListener("click", () => {
     populateTrackingContainer("weekly");
+    addClasses("weekly", ["text-white", "font-bold"]);
+    removeClasses("daily", ["text-white", "font-bold"]);
+    removeClasses("monthly", ["text-white", "font-bold"]);
   });
 
 const monthly = document
   .getElementById("monthly")
   .addEventListener("click", () => {
     populateTrackingContainer("monthly");
+    addClasses("monthly", ["text-white", "font-bold"]);
+    removeClasses("weekly", ["text-white", "font-bold"]);
+    removeClasses("daily", ["text-white", "font-bold"]);
   });
 
 populateTrackingContainer("weekly");
