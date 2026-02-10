@@ -98,12 +98,13 @@ function populateTrackingContainer(inTimeframe) {
         trackingContainer.appendChild(
           makeCard(
             element.title,
-            category.color,
-            category.icon,
+            category[element.title].color,
+            category[element.title].icon,
             element.timeframes[inTimeframe].current,
             element.timeframes[inTimeframe].previous,
           ),
         );
+        //console.log(category[element.title].icon);
       });
     });
 }
