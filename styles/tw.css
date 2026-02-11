@@ -219,14 +219,8 @@
   .flex {
     display: flex;
   }
-  .table {
-    display: table;
-  }
   .w-16 {
     width: calc(var(--spacing) * 16);
-  }
-  .w-81 {
-    width: calc(var(--spacing) * 81);
   }
   .w-81\.75 {
     width: calc(var(--spacing) * 81.75);
@@ -234,20 +228,11 @@
   .w-full {
     width: 100%;
   }
-  .border-collapse {
-    border-collapse: collapse;
-  }
-  .resize {
-    resize: both;
-  }
   .flex-col {
     flex-direction: column;
   }
   .flex-row {
     flex-direction: row;
-  }
-  .flex-wrap {
-    flex-wrap: wrap;
   }
   .items-center {
     align-items: center;
@@ -272,10 +257,6 @@
   }
   .rounded-full {
     border-radius: calc(infinity * 1px);
-  }
-  .border {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
   }
   .border-4 {
     border-style: var(--tw-border-style);
@@ -314,14 +295,8 @@
   .bg-\[url\(\'\$\{category\[name\]\.icon\}\'\)\] {
     background-image: url('${category[name].icon}');
   }
-  .bg-\[url\(\'\$\{icon\}\'\)\] {
-    background-image: url('${icon}');
-  }
   .bg-\[url\(\'\.\.\/images\/icon-exercise\.svg\'\)\] {
     background-image: url('../images/icon-exercise.svg');
-  }
-  .bg-\[url\(\'\.\.\/images\/icon-pay\.svg\'\)\] {
-    background-image: url('../images/icon-pay.svg');
   }
   .bg-\[url\(\'\.\.\/images\/icon-play\.svg\'\)\] {
     background-image: url('../images/icon-play.svg');
@@ -359,31 +334,13 @@
   .text-left {
     text-align: left;
   }
-  .font-rubik {
-    font-family: var(--font-rubik);
-  }
   .text-3xl {
     font-size: var(--text-3xl);
     line-height: var(--tw-leading, var(--text-3xl--line-height));
   }
-  .text-\[1\.25rem\] {
-    font-size: 1.25rem;
-  }
-  .leading-5 {
-    --tw-leading: calc(var(--spacing) * 5);
-    line-height: calc(var(--spacing) * 5);
-  }
-  .leading-5\.25 {
-    --tw-leading: calc(var(--spacing) * 5.25);
-    line-height: calc(var(--spacing) * 5.25);
-  }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
-  }
-  .tracking-normal {
-    --tw-tracking: var(--tracking-normal);
-    letter-spacing: var(--tracking-normal);
   }
   .text-navy-200 {
     color: var(--color-navy-200);
@@ -393,13 +350,6 @@
   }
   .text-white {
     color: var(--color-white);
-  }
-  .underline {
-    text-decoration-line: underline;
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
   }
   .hover\:font-bold {
     &:hover {
@@ -661,13 +611,27 @@
     justify-content: space-between;
     font-family: var(--font-rubik);
     font-size: 18px;
-    --tw-leading: calc(var(--spacing) * 5.25);
-    line-height: calc(var(--spacing) * 5.25);
-    --tw-font-weight: var(--font-weight-medium);
-    font-weight: var(--font-weight-medium);
+    --tw-leading: calc(var(--spacing) * 5);
+    line-height: calc(var(--spacing) * 5);
+    --tw-font-weight: var(--font-weight-normal);
+    font-weight: var(--font-weight-normal);
     --tw-tracking: var(--tracking-normal);
     letter-spacing: var(--tracking-normal);
     color: var(--color-white);
+  }
+  .card-data-time {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--color-white);
+    @media (width >= 48rem) {
+      flex-direction: row;
+    }
+    @media (width >= 48rem) {
+      flex-wrap: wrap;
+    }
   }
   .attribution {
     text-align: center;
@@ -684,11 +648,11 @@
   inherits: false;
   initial-value: solid;
 }
-@property --tw-leading {
+@property --tw-font-weight {
   syntax: "*";
   inherits: false;
 }
-@property --tw-font-weight {
+@property --tw-leading {
   syntax: "*";
   inherits: false;
 }
@@ -696,19 +660,13 @@
   syntax: "*";
   inherits: false;
 }
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
       --tw-border-style: solid;
-      --tw-leading: initial;
       --tw-font-weight: initial;
+      --tw-leading: initial;
       --tw-tracking: initial;
-      --tw-outline-style: solid;
     }
   }
 }

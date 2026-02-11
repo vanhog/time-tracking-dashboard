@@ -86,7 +86,11 @@
   }
 
   .card-data-header {
-    @apply flex flex-row justify-between items-center w-full font-rubik font-medium text-[18px] leading-5.25 tracking-normal text-white;
+    @apply flex flex-row justify-between items-center w-full font-rubik font-normal text-[18px] leading-5 tracking-normal text-white;
+  }
+
+  .card-data-time {
+    @apply flex flex-row justify-between items-center w-full text-white md:flex-row md:flex-wrap;
   }
 
   .attribution {

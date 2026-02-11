@@ -7,20 +7,6 @@ const category = {
   "Self Care": { icon: "../images/icon-self-care.svg", color: "bg-yellow-300" },
 };
 
-const cardDataHeaderClasses = [
-  "flex",
-  "flex-row",
-  "justify-between",
-  "items-center",
-  "w-full",
-  "font-rubik",
-  "font-regular",
-  "text-[1.25rem]",
-  "leading-5.25",
-  "tracking-normal",
-  "text-white",
-];
-
 const cardDataTimeClasses = [
   "flex",
   "flex-row",
@@ -44,10 +30,7 @@ function makeCard(name, color, icon, hrsCurrent, hrsPrevious) {
   cardData.classList.add("card-data");
   cardData.setAttribute("tabindex", "0");
   let cardDataHeader = document.createElement("div");
-
-  cardDataHeaderClasses.forEach((element) => {
-    cardDataHeader.classList.add(element);
-  });
+  cardDataHeader.classList.add("card-data-header");
 
   let cardDataHeaderCategory = document.createElement("h2");
   cardDataHeaderCategory.innerText = name; // NAME
@@ -62,9 +45,10 @@ function makeCard(name, color, icon, hrsCurrent, hrsPrevious) {
   cardData.appendChild(cardDataHeader);
 
   let cardDataTime = document.createElement("div");
-  cardDataTimeClasses.forEach((element) => {
-    cardDataTime.classList.add(element);
-  });
+  cardDataTime.classList.add("card-data-time");
+  // cardDataTimeClasses.forEach((element) => {
+  //   cardDataTime.classList.add(element);
+  // });
 
   let cardDataTimeHoursCurrent = document.createElement("div");
   cardDataTimeHoursCurrent.classList.add("text-preset-3");
