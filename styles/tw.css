@@ -220,8 +220,14 @@
   .flex {
     display: flex;
   }
+  .table {
+    display: table;
+  }
   .w-16 {
     width: calc(var(--spacing) * 16);
+  }
+  .w-81 {
+    width: calc(var(--spacing) * 81);
   }
   .w-81\.75 {
     width: calc(var(--spacing) * 81.75);
@@ -229,11 +235,20 @@
   .w-full {
     width: 100%;
   }
+  .border-collapse {
+    border-collapse: collapse;
+  }
+  .resize {
+    resize: both;
+  }
   .flex-col {
     flex-direction: column;
   }
   .flex-row {
     flex-direction: row;
+  }
+  .flex-wrap {
+    flex-wrap: wrap;
   }
   .items-center {
     align-items: center;
@@ -258,6 +273,10 @@
   }
   .rounded-full {
     border-radius: calc(infinity * 1px);
+  }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
   }
   .border-4 {
     border-style: var(--tw-border-style);
@@ -352,6 +371,13 @@
   .text-white {
     color: var(--color-white);
   }
+  .underline {
+    text-decoration-line: underline;
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
+  }
   .hover\:font-bold {
     &:hover {
       @media (hover: hover) {
@@ -421,6 +447,11 @@
   .lg\:h-\[calc\(var\(--card-height-sm\)\*2\)\] {
     @media (width >= 64rem) {
       height: calc(var(--card-height-sm) * 2);
+    }
+  }
+  .lg\:h-\[calc\(var\(--card-height-sm\)\*2\.3\)\] {
+    @media (width >= 64rem) {
+      height: calc(var(--card-height-sm) * 2.3);
     }
   }
   .lg\:h-full {
@@ -606,6 +637,9 @@
     @media (width >= 48rem) {
       height: calc(var(--card-height-md) * 0.8);
     }
+    @media (width >= 64rem) {
+      height: calc(var(--card-height-md) * 0.9);
+    }
   }
   .card-data-header {
     display: flex;
@@ -656,6 +690,11 @@
   syntax: "*";
   inherits: false;
 }
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @property --tw-leading {
   syntax: "*";
   inherits: false;
@@ -669,6 +708,7 @@
     *, ::before, ::after, ::backdrop {
       --tw-border-style: solid;
       --tw-font-weight: initial;
+      --tw-outline-style: solid;
       --tw-leading: initial;
       --tw-tracking: initial;
     }
