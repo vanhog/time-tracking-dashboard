@@ -36,6 +36,7 @@
     --color-purple-600c: oklch(0.5676 0.2171 278.99);
     --card-height-sm: 10rem;
     --card-height-md: 13.3125rem;
+    --card-height-lg: 15.25rem;
   }
 }
 @layer base {
@@ -334,27 +335,13 @@
   .text-left {
     text-align: left;
   }
-  .font-rubik {
-    font-family: var(--font-rubik);
-  }
   .text-3xl {
     font-size: var(--text-3xl);
     line-height: var(--tw-leading, var(--text-3xl--line-height));
   }
-  .text-\[1\.25rem\] {
-    font-size: 1.25rem;
-  }
-  .leading-5\.25 {
-    --tw-leading: calc(var(--spacing) * 5.25);
-    line-height: calc(var(--spacing) * 5.25);
-  }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
-  }
-  .tracking-normal {
-    --tw-tracking: var(--tracking-normal);
-    letter-spacing: var(--tracking-normal);
   }
   .text-navy-200 {
     color: var(--color-navy-200);
@@ -597,6 +584,9 @@
       width: calc(var(--spacing) * 47);
     }
     @media (width >= 64rem) {
+      height: var(--card-height-lg);
+    }
+    @media (width >= 64rem) {
       width: calc(var(--spacing) * 63.75);
     }
   }
@@ -625,13 +615,27 @@
     justify-content: space-between;
     font-family: var(--font-rubik);
     font-size: 18px;
-    --tw-leading: calc(var(--spacing) * 5.25);
-    line-height: calc(var(--spacing) * 5.25);
-    --tw-font-weight: var(--font-weight-medium);
-    font-weight: var(--font-weight-medium);
+    --tw-leading: calc(var(--spacing) * 5);
+    line-height: calc(var(--spacing) * 5);
+    --tw-font-weight: var(--font-weight-normal);
+    font-weight: var(--font-weight-normal);
     --tw-tracking: var(--tracking-normal);
     letter-spacing: var(--tracking-normal);
     color: var(--color-white);
+  }
+  .card-data-time {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--color-white);
+    @media (width >= 48rem) {
+      flex-direction: row;
+    }
+    @media (width >= 48rem) {
+      flex-wrap: wrap;
+    }
   }
   .attribution {
     text-align: center;
@@ -648,11 +652,11 @@
   inherits: false;
   initial-value: solid;
 }
-@property --tw-leading {
+@property --tw-font-weight {
   syntax: "*";
   inherits: false;
 }
-@property --tw-font-weight {
+@property --tw-leading {
   syntax: "*";
   inherits: false;
 }
@@ -664,8 +668,8 @@
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
       --tw-border-style: solid;
-      --tw-leading: initial;
       --tw-font-weight: initial;
+      --tw-leading: initial;
       --tw-tracking: initial;
     }
   }

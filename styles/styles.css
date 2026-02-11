@@ -32,6 +32,7 @@
 
   --card-height-sm: 10rem;
   --card-height-md: 13.3125rem;
+  --card-height-lg: 15.25rem;
 }
 
 @layer components {
@@ -78,7 +79,7 @@
   }
 
   .card-container {
-    @apply bg-top-right bg-no-repeat h-(--card-height-sm) md:h-(--card-height-md) w-81.75 md:w-47 lg:w-63.75 flex flex-col justify-end rounded-2xl m-1;
+    @apply bg-top-right bg-no-repeat h-(--card-height-sm) md:h-(--card-height-md) lg:h-(--card-height-lg) w-81.75 md:w-47 lg:w-63.75 flex flex-col justify-end rounded-2xl m-1;
   }
 
   .card-data {
@@ -86,7 +87,11 @@
   }
 
   .card-data-header {
-    @apply flex flex-row justify-between items-center w-full font-rubik font-medium text-[18px] leading-5.25 tracking-normal text-white;
+    @apply flex flex-row justify-between items-center w-full font-rubik font-normal text-[18px] leading-5 tracking-normal text-white;
+  }
+
+  .card-data-time {
+    @apply flex flex-row justify-between items-center w-full text-white md:flex-row md:flex-wrap;
   }
 
   .attribution {
