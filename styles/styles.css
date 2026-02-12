@@ -83,7 +83,7 @@
   }
 
   .card-data {
-    @apply bg-navy-900 active:bg-navy-800 rounded-2xl flex flex-col justify-end items-start h-[calc(var(--card-height-sm)*0.7)] md:h-[calc(var(--card-height-md)*0.8)] lg:h-[calc(var(--card-height-md)*0.9)] px-6 py-7;
+    @apply bg-navy-900 active:bg-navy-800 rounded-2xl flex flex-col justify-end items-start h-[calc(var(--card-height-sm)*0.7)] md:h-[calc(var(--card-height-md)*0.8)] lg:h-[calc(var(--card-height-md)*0.93)] px-6 py-7;
   }
 
   .card-data-header {
