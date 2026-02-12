@@ -7,17 +7,6 @@ const category = {
   "Self Care": { icon: "../images/icon-self-care.svg", color: "bg-yellow-300" },
 };
 
-const cardDataTimeClasses = [
-  "flex",
-  "flex-row",
-  "justify-between",
-  "items-center",
-  "w-full",
-  "text-white",
-  "md:flex-row",
-  "md:flex-wrap",
-];
-
 let trackingContainer = document.getElementById("tracking-container");
 
 function makeCard(name, color, icon, hrsCurrent, hrsPrevious) {
@@ -29,6 +18,7 @@ function makeCard(name, color, icon, hrsCurrent, hrsPrevious) {
   let cardData = document.createElement("div");
   cardData.classList.add("card-data");
   cardData.setAttribute("tabindex", "0");
+
   let cardDataHeader = document.createElement("div");
   cardDataHeader.classList.add("card-data-header");
 
@@ -46,9 +36,6 @@ function makeCard(name, color, icon, hrsCurrent, hrsPrevious) {
 
   let cardDataTime = document.createElement("div");
   cardDataTime.classList.add("card-data-time");
-  // cardDataTimeClasses.forEach((element) => {
-  //   cardDataTime.classList.add(element);
-  // });
 
   let cardDataTimeHoursCurrent = document.createElement("div");
   cardDataTimeHoursCurrent.classList.add("text-preset-3");
@@ -88,7 +75,6 @@ function populateTrackingContainer(inTimeframe) {
             element.timeframes[inTimeframe].previous,
           ),
         );
-        //console.log(category[element.title].icon);
       });
     });
 }
